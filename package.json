@@ -1,16 +1,23 @@
 {
-  "name": "ui-kit-sample-app",
+  "name": "cometchat-video",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "engines": {
+    "node": "12.17.0",
+    "npm": "6.14.4"
+  },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~8.3.21",
+    "@angular/compiler-cli": "~8.2.14",
     "@angular/animations": "8.2.14",
     "@angular/common": "8.2.14",
     "@angular/compiler": "8.2.14",
@@ -22,8 +29,11 @@
     "@cometchat-pro/chat": "^2.0.6",
     "@ctrl/ngx-emoji-mart": "^3.0.4",
     "rxjs": "~6.5.4",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "typescript": "3.5.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",
